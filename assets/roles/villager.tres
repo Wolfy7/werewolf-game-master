@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardRole" format=3 uid="uid://cgpo0dqw6agjj"]
+
+[ext_resource type="Script" uid="uid://gddvku05ql42" path="res://assets/roles/card_role.gd" id="1_o225l"]
+
+[resource]
+script = ExtResource("1_o225l")
+name = "Dorfbewohner"
+description = "Ein normaler Dorfbewohner. Nachts schläfst du, tagsüber hilfst du die Werwölfe zu finden."
+metadata/_custom_type_script = "uid://gddvku05ql42"

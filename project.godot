@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Werewolf Game Master"
+run/main_scene="uid://dq03uvrvyhtpy"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
