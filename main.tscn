@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dq03uvrvyhtpy"]
 
+[ext_resource type="Texture2D" uid="uid://2h85demagwi0" path="res://assets/backgrounds/istockphoto-939518514-612x612.jpg" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c8mmfyml850wc" path="res://assets/tables/table_round.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://c3kw2mc33rhos" path="res://assets/tables/360_F_223060577_Up871tVFzW9s3J5y6ILNQnDiPeOOsBTC.jpg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ls34xrduqyh3" path="res://scenes/player.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Control" unique_id=399816373]
 layout_mode = 3
@@ -11,7 +13,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1788308542]
+[node name="Background" type="TextureRect" parent="." unique_id=408141893]
+modulate = Color(1, 1, 1, 0.5058824)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h2yge")
+
+[node name="TableLayer" type="Control" parent="." unique_id=290146263]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="TableLayer" unique_id=1788308542]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -19,15 +36,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -400.0
-offset_right = 400.0
-offset_bottom = 400.0
+offset_left = 220.0
+offset_top = -20.0
+offset_right = 1020.0
+offset_bottom = 780.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ig7tw")
 
-[node name="Label" type="Label" parent="TextureRect" unique_id=1416164190]
+[node name="Label" type="Label" parent="TableLayer/TextureRect" unique_id=1416164190]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -45,22 +62,22 @@ text = "Werewolf Game Master
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1031078259]
+[node name="TextureRect2" type="TextureRect" parent="TableLayer" unique_id=1031078259]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -441.5
-offset_top = -180.0
-offset_right = 441.5
-offset_bottom = 180.0
+offset_left = 178.5
+offset_top = 200.0
+offset_right = 1061.5
+offset_bottom = 560.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_0xm2m")
 
-[node name="Label2" type="Label" parent="TextureRect2" unique_id=834302213]
+[node name="Label2" type="Label" parent="TableLayer/TextureRect2" unique_id=834302213]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -77,3 +94,38 @@ text = "Werewolf Game Master
  Bereit für die erste Nacht."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Player" parent="." unique_id=1750820860 instance=ExtResource("4_1bvp3")]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 97.0
+offset_right = 454.0
+offset_bottom = 137.0
+
+[node name="Player2" parent="." unique_id=948005370 instance=ExtResource("4_1bvp3")]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 614.0
+offset_right = 658.0
+offset_bottom = 654.0
+
+[node name="Player3" parent="." unique_id=1481081314 instance=ExtResource("4_1bvp3")]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 611.0
+offset_right = 975.0
+offset_bottom = 651.0
+
+[node name="Player4" parent="." unique_id=824841150 instance=ExtResource("4_1bvp3")]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 96.0
+offset_right = 890.0
+offset_bottom = 136.0
+
+[node name="Player5" parent="." unique_id=984103794 instance=ExtResource("4_1bvp3")]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 612.0
+offset_right = 373.0
+offset_bottom = 652.0
