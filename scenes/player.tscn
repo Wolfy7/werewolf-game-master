@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ls34xrduqyh3"]
 
-[ext_resource type="Texture2D" uid="uid://bj5hxg3gycsn8" path="res://assets/cards/7b6e292b676638baf71202d7f011fd9d.jpg" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://bj5hxg3gycsn8" path="res://assets/cards/background_alternative.jpg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cxdptfkejsyy3" path="res://scenes/player.gd" id="1_g2els"]
 
 [node name="Player" type="Control" unique_id=1750820860]
