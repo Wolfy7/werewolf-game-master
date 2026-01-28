@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ls34xrduqyh3" path="res://scenes/player.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://5mmkbwdjwr67" path="res://player_layer.gd" id="4_lquwl"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lquwl"]
+radius = 360.0
+
 [node name="Main" type="Control" unique_id=399816373]
 layout_mode = 3
 anchors_preset = 15
@@ -25,22 +28,24 @@ grow_vertical = 2
 texture = ExtResource("1_h2yge")
 
 [node name="TableLayer" type="Control" parent="." unique_id=290146263]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="TableLayer" unique_id=1788308542]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 220.0
-offset_top = -20.0
-offset_right = 1020.0
-offset_bottom = 780.0
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ig7tw")
@@ -64,18 +69,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="TableLayer" unique_id=1031078259]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 178.5
-offset_top = 200.0
-offset_right = 1061.5
-offset_bottom = 560.0
-grow_horizontal = 2
-grow_vertical = 2
+visible = false
+layout_mode = 0
+offset_right = 538.0
+offset_bottom = 360.0
 texture = ExtResource("2_0xm2m")
 
 [node name="Label2" type="Label" parent="TableLayer/TextureRect2" unique_id=834302213]
@@ -97,9 +94,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PlayerLayer" type="Control" parent="." unique_id=300854221]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("4_lquwl")
 player_scene = ExtResource("4_1bvp3")
 
@@ -107,3 +107,8 @@ player_scene = ExtResource("4_1bvp3")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=776901819]
+visible = false
+position = Vector2(643, 395)
+shape = SubResource("CircleShape2D_lquwl")
