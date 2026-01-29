@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c3kw2mc33rhos" path="res://assets/tables/360_F_223060577_Up871tVFzW9s3J5y6ILNQnDiPeOOsBTC.jpg" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ls34xrduqyh3" path="res://scenes/player.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://5mmkbwdjwr67" path="res://player_layer.gd" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bsclvm7yhjux8" path="res://scenes/players_action_panel.tscn" id="6_7mycd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lquwl"]
 radius = 360.0
@@ -102,6 +103,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_lquwl")
 player_scene = ExtResource("4_1bvp3")
+
+[node name="PlayersActionPanel" parent="PlayerLayer" unique_id=1015590204 instance=ExtResource("6_7mycd")]
+layout_mode = 1
 
 [node name="OverlayLayer" type="Control" parent="." unique_id=432497780]
 anchors_preset = 0
